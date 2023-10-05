@@ -29,6 +29,34 @@
   color: #61dafb;
 }
 
+h1 {
+  color: #000;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal; 
+}
+
+p {
+  color: #616161;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+  padding-left: 175px;
+  padding-right: 175px;
+}
+
+/* Style the horizontal line */
+hr {
+  border: .5px solid #333; /* Example border style */
+  margin: 20px auto; /* Center the line and add spacing */
+  width: 80%; /* Adjust the width as needed */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
