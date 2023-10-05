@@ -1,0 +1,384 @@
+#background {
+	margin-top: -5em;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file {
+    display: flex;
+	flex-direction: column;
+	margin-top: 1em;
+    margin-bottom: 0.75em;
+	height: 4vw;
+	width: 60%;
+	background-color: #F9f9f9;
+	border-radius: 15px;
+	box-shadow: 4px 4px 10px rgb(90, 90, 90);
+	overflow: hidden;
+	align-items: center;
+	font-size: 1.25vw;
+	justify-content: space-around;
+}
+
+.UploadUIContainer {
+	display: flex;
+	flex-direction: row;
+	margin-top: 5em;
+	height: 40vh;
+	justify-content: space-around;
+  }
+  
+  .PosterDragAndDrop {
+	display: flex;
+    flex-direction: column;
+	height: max-content;
+    width: 31%;
+    background-color: #F9f9f9;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgb(90 90 90);
+    overflow: hidden;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 2vw;
+  }
+  .Results {
+	display: flex;
+	flex-direction: column;
+	width: 65%;
+	height: max-content;
+	background-color: #F9f9f9;
+	border-radius: 1vw;
+	box-shadow: 4px 4px 10px rgb(90, 90, 90);
+	overflow: hidden;
+	align-items: flex-end;
+	padding-right: 1em;
+	padding-top: 1.1em;
+    padding-bottom: 1em;
+	justify-content: left;
+  }
+  .Results > span {
+	z-index: 3;
+	border-width: 0.5vw!important;
+  }
+
+  .suggestions{
+    color: #333;
+    font-size: 1vw;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  div#suggestions {
+	max-width: 25%;
+  }
+
+  #suggestions > p, #information > p {
+    padding: 1vw;
+	padding-top: 2vw;
+  }
+  
+  .MResults {
+	display: flex;
+    flex-direction: column;
+    width: calc(96%/3);
+    padding: 0.75vw;
+    height: max-content;
+    background-color: #F9f9f9;
+    border-radius: 2vw;
+    box-shadow: 4px 4px 10px rgb(90 90 90);
+    overflow: visible;
+    align-items: center;
+    margin: 1vw;
+    font-size: 1vw;
+	display: none;
+  }
+
+  .PDResults {
+	display: flex;
+    flex-direction: column;
+    width: calc(96%/3);
+    padding: 0.75vw;
+    height: max-content;
+    background-color: #F9f9f9;
+    border-radius: 2vw;
+    box-shadow: 4px 4px 10px rgb(90 90 90);
+    overflow: visible;
+    align-items: center;
+    margin: 1vw;
+    font-size: 1vw;
+	display: none
+  }
+
+  .TResults {
+	display: flex;
+    flex-direction: column;
+    width: calc(96%/3);
+    padding: 0.75vw;
+    height: max-content;
+    background-color: #F9f9f9;
+    border-radius: 2vw;
+    box-shadow: 4px 4px 10px rgb(90 90 90);
+    overflow: visible;
+    align-items: center;
+    margin: 1vw;
+    font-size: 1vw;
+	display: none
+  }
+  
+  .SectionHeading {
+	width: 97%;
+	font-size: 1vw;
+	padding-left: 20px;
+	padding-bottom: 15px;
+	color: #333333;
+	border-bottom: 3px solid #333333;
+	user-select: none;
+	margin: 10px;
+	margin-bottom: 0.5em;
+	justify-content: center;
+    font-size: 2vw;
+  }
+
+  .MResults > h3 {
+	width: 90%;
+	padding: 15px;
+	color: #333333;
+	border-bottom: 3px solid #333333;
+	user-select: none;
+	margin: 10px;
+	margin-bottom: 0.5em;
+	justify-content: center;
+    font-size: 1.5vw;
+  }
+  
+  .PDResults > h3 {
+	width: 95%;
+	padding: 5px;
+	color: #333333;
+	border-bottom: 3px solid #333333;
+	user-select: none;
+	margin: 0.5em;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+	justify-content: center;
+    font-size: 1.1vw;
+  }
+
+  .TResults > h3 {
+	width: 90%;
+	padding: 15px;
+	color: #333333;
+	border-bottom: 3px solid #333333;
+	user-select: none;
+	margin: 10px;
+	margin-bottom: 0.5em;
+	justify-content: center;
+    font-size: 1.5vw;
+  }
+  
+  .DragAndDropArea {
+	cursor: copy;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100% - 5em);
+	height: 80%;
+	background-color: #e1e1e1;
+	border-radius: 15px;
+	margin: 1em;
+	padding: 1em;
+	border: 1px dashed #a2a2a2;
+	transition: 0.3s all ease-in-out;
+	overflow: hidden;
+  }
+  
+  .DragAndDropArea:hover {
+	background-color: #33333387;
+	border: 1px dashed #00853e;
+	content-visibility: inherit;
+  }
+  
+  .magicFile {
+	width: 30vw;
+	height: 100%;
+	object-fit: contain;
+	overflow: hidden;
+	z-index: 1;
+	position: absolute;
+  }
+  
+  .TimeToCalculate {
+	color: #6f6f6f;
+	font-size: 14px;
+  }
+  
+  .HelpIcon {
+	cursor: pointer;
+	color: #f6f6f6;
+  }
+  
+#canvas{
+	display: block;
+	max-width: calc(100vw/3.5);
+	height: auto;
+    padding-bottom: 3vw;
+	padding-top: 3vw;
+}
+
+#resultsChart{
+	display: block;	
+    max-width: 45vw;
+    max-height: 60vh;
+    padding-right: 3vw;
+    padding-top: 2vw;
+}
+
+
+#results {
+    width: 65vw;
+    column-count: 3;
+    padding-bottom: 3vh;
+	padding-left: 2vw;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Loader {
+	width: 100%;
+	display: none;
+	justify-content: center;
+    padding-bottom: 2vw;
+}
+
+#detailButton {
+	display: none;
+    position: absolute;
+    padding: 1.25em;
+    flex-direction: column;
+    height: 2vw;
+    background-color: #F9f9f9;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgb(90 90 90);
+    overflow: hidden;
+    font-size: 1.1vw;
+    justify-content: space-around;
+}
+
+#infoButton {
+	display: none;
+    position: absolute;
+    padding: 1.25em;
+	margin-right: 10em;
+    flex-direction: column;
+    height: 2vw;
+    background-color: #F9f9f9;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgb(90 90 90);
+    overflow: hidden;
+    font-size: 1.1vw;
+    justify-content: space-around;
+}
+.exportButton {
+	display: none;
+    padding: 1.25em;
+    flex-direction: column;
+    height: 1.5vw;
+    background-color: #F9f9f9;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgb(90 90 90);
+    overflow: hidden;
+    font-size: 1.1vw;
+    justify-content: space-around;
+}
+
+  @media screen and (max-width: 900px) {
+	.GuestUIContainer {
+	  display: flex;
+	  flex-direction: column;
+	  margin-top: 6em;
+	  height: auto;
+	  justify-content: center;
+	  align-items: center;
+	}
+	.research-container > p{
+		font-size: 4vw!important;
+		padding-top: 10%;
+	}
+	.research-container > h3{
+		font-size: 6vw!important;
+	}
+	.research-container > a{
+		font-size: 4vw!important;
+		padding-top: 3%;
+	}
+	.PosterDragAndDrop {
+	  width: 95%;
+	}
+	#canvas{
+		max-width: 80%;
+	}
+	.DragAndDropArea {
+	  height: 100px;
+	}
+  
+	.Results {
+	  width: 95%;
+	  margin-top: 2em;
+	}
+	
+	.UploadUIContainer {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.SectionHeading {
+		font-size: 5vw!important;
+	}
+	.file {
+		font-size: 4vw;
+		height: 10vw;
+	}
+	#infoButton {
+		font-size: 3vw;
+		height: 6vw;
+		margin-right: 9em;
+
+	}
+	#detailButton, .exportButton {
+		font-size: 3vw;
+		height: 6vw;
+	}
+	.suggestions {
+		font-size: 3vw;
+		flex-direction: column;
+		width: 95%;
+	}
+	div#suggestions {
+		max-width: 100%;
+	}
+	.MResults, .PDResults, .TResults{
+		width: 60%;
+		font-size: 3vw;
+		align-self: center;
+		margin-bottom: 10%;
+	}
+	#resultsChart {
+		max-width: 90%;
+		max-height: 85%;
+	}
+  }
+  @media screen and (max-height: 800px) { 
+	.UploadUIContainer{
+		margin-top: 2em;
+	}
+  }
