@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Sidebar />
         <h1>Designing Accessible Websites</h1>
         <hr>
         </hr>
