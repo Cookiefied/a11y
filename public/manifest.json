@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "a11y_square.png",
+      "src": "a11y_circle.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "a11y_square.png",
+      "src": "a11y_circle.png",
       "type": "image/png",
       "sizes": "512x512"
     }
