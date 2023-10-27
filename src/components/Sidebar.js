@@ -11,6 +11,33 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
+window.onload = function() {
+  //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    console.log(dropdown[i]); 
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+      // this bit changes the arrow to point down when the dropdown is open
+      if (this.children[1].style.display === "none") {
+        this.children[1].style.display = "inline-block";
+        this.children[0].style.display = "none";
+      }
+      else {
+        this.children[0].style.display = "inline-block";
+        this.children[1].style.display = "none";
+      }
+    });
+  }
+}
 function Sidebar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -96,25 +123,50 @@ function Sidebar() {
   }, [openLinks]);
   return (
     <>
+        <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link></head>
         <nav className='sidebar'>
             <div className='sidebar-container'>
                 <div class="Hamburger-sidebar Hamburger-bar-block Hamburger-border-right" style={{display: "none"}} id="Hamburger-Sidebar">
                 </div>
                 <div class="sidenav">
                   <a href="#">Home</a>
-                  <a href="#">• Designing Accessible Websites</a>
-                  <a href="#">• Color Blindness</a>
-                  <a href="#">• Reading Disorders</a>
-                  <a href="#">• Text alternatives for non-text content</a>
-                  <a href="#">• Captions</a>
-                  <a href="#">• Screen Reader</a>
-                  <a href="#">• Text-to-Speech</a>
-                  <a href="#">• Screen Magnifier</a>
-                  <a href="#">• Pop-up and Animations Blockers</a>
-                  <a href="#">• Reading Assistants</a>
-                  <a href="#">• Consistency and Predictability</a>
-                  <a href="#">• Keyword Search</a>
-                  <a href="#">• Navigation Mechanisms</a>
+                  <button class="dropdown-btn">Designing Accessible Websites
+                    <i class="fa fa-caret-right" style={{display: "inline-block"}}></i>
+                    <i class="fa fa-caret-down" style={{display: "none"}}></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="#">Principle 1: Perceivability</a>
+                    <a href="#">Principle 2: Operability</a>
+                    <a href="#">Principle 3: Understandable</a>
+                    <a href="#">Principle 4: Robust</a>
+                  </div>
+                  <button class="dropdown-btn">Color Blindness
+                    <i class="fa fa-caret-right" style={{display: "inline-block"}}></i>
+                    <i class="fa fa-caret-down" style={{display: "none"}}></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="#">Types of</a>
+                    <a href="#">How it affects vision</a>
+                  </div>
+                  <button class="dropdown-btn">Reading Disorders
+                    <i class="fa fa-caret-right" style={{display: "inline-block"}}></i>
+                    <i class="fa fa-caret-down" style={{display: "none"}}></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="https://www.w3.org/WAI/people-use-web/user-stories/#classroomstudent">Refer to Preety</a>
+                    <a href="#">Types of</a>
+                    <a href="#">Principles</a>
+                  </div>
+                  <a href="#">Text alternatives for non-text content</a>
+                  <a href="#">Captions</a>
+                  <a href="#">Screen Reader</a>
+                  <a href="#">Text-to-Speech</a>
+                  <a href="#">Screen Magnifier</a>
+                  <a href="#">Pop-up and Animations Blockers</a>
+                  <a href="#">Reading Assistants</a>
+                  <a href="#">Consistency and Predictability</a>
+                  <a href="#">Keyword Search</a>
+                  <a href="#">Navigation Mechanisms</a>
                 </div>
                 <Link to="/" className='sidebar-logo' onClick={closeMobileMenu}>
                     a11y - accessibility for all<i className='fab fa-typeo3'/>
@@ -218,11 +270,11 @@ function Sidebar() {
                                 tabIndex={-1}
                             > 
                             <ul>
-                                <li><a alt="Chicago Medicine Colour Blindness information" href="https://chicago.medicine.uic.edu/departments/academic-departments/ophthalmology-visual-sciences/our-department/media-center/eye-facts/color-blindness/">Chicago Medicine UIC</a></li>
-                                <li><a alt="URMC Colour Blindness information" href="https://www.urmc.rochester.edu/encyclopedia/content.aspx?contenttypeid=134&contentid=526">URMC Rochester</a></li>
-                                <li><a alt="SUNY Colour Blindness information" href="https://www.sunyopt.edu/news/what-it-means-to-be-color-blind-and-what-you-can-do-about-it/">Sunyopt</a></li>
-                                <li><a alt="Colour Contrast Checker" href="https://contrastchecker.com/">Contrast Checker</a></li>
-                                <li><a alt="Web Aim Colour Contrast Checker" href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a></li>
+                                <li><a alt="Designing Accessible Websites" href="https://www.w3.org/WAI/standards-guidelines/wcag/">Designing Accessible Websites</a></li>
+                                <li><a alt="Refer to Preety" href="https://www.w3.org/WAI/people-use-web/user-stories/#classroomstudent">Reading disorders</a></li>
+                                <li><a alt="Types of Reading Disorders" href="https://www.w3.org/WAI/people-use-web/abilities-barriers/#cognitive">Types Of</a></li>
+                                <li><a alt="Quick reference for WCAG standards" href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG Principles</a></li>
+                                <li><a alt="SeeColor Project, a colorblind image detector" href="https://seecolor-unt.web.app/">SeeColor</a></li>
                             </ul>
                             </DialogContentText>
                             </DialogContent>
