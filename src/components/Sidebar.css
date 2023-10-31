@@ -7,7 +7,7 @@
   left: 0;
   background-color: rgb(28, 27, 27); /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 10px;
+  padding-top: 80px;
 }
 
 /* The navigation menu links */
@@ -46,6 +46,7 @@
     top: 0;
     z-index: 9;
     justify-content: space-evenly;
+    margin-left: 12vw;
   }
   
   .sidebar-container {
@@ -153,7 +154,7 @@
   left: 0;
   background-color: var(--background-color);
   overflow-x: hidden;
-  padding-top: 80px;
+  padding-top: 10px;
 }
 
 /* Style the sidenav links and the dropdown button */
