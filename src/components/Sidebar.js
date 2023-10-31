@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Sidebar.css';
+import logo from '../images/a11y_circle.png';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import '@mui/icons-material/DeleteOutlined';
 import Button from '@mui/material/Button';
@@ -178,6 +179,7 @@ function Sidebar() {
                 <div class="Hamburger-sidebar Hamburger-bar-block Hamburger-border-right" style={{display: "none"}} id="Hamburger-Sidebar">
                 </div>
                 <div class="sidenav">
+                  <img src={logo} className="App-logo" alt="logo" />
                   <a href="#" onClick={topicSelectHOME}>Home</a>
                   <button class="dropdown-btn">Designing Accessible Websites
                     <i class="fa fa-caret-right" style={{display: "inline-block"}}></i>
