@@ -297,7 +297,6 @@ function Sidebar() {
                                 tabIndex={-1}
                             >
                                 <p>The A11y Upgrades project is aimed at creating and maintaining an information-based website. The project's primary objectives are to promote accessibility awareness, and test the knowledge gained by interacting with our website.</p>
-                                <p>This is our implementation of a web application where all can upload an image and our application will scan it and report how accessible the image is for different types of color-blindess, based on user testing. Our application will give the image a rating for Monochromacy and the three variations of Dichromacy. It will also explain how to improve the ratings for each, and link to background information on colour blindness. </p>
                             </DialogContentText>
                             </DialogContent>
                         </Dialog>
