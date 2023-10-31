@@ -17,10 +17,35 @@ input[type="file"] {
 	color: white;
 	margin-left: 15vw;
     object-fit: cover;
-    width: 100% - 15vw;
+    width: 100%;
     height: 100%;
     position: fixed;
     z-index: -1;
+
+
+	.DAW1 {
+		width: 65%;
+		margin-left: 7.5vw;
+		margin-right: 25vw;
+	}
+
+	.DAW2 {
+		width: 65%;
+		margin-left: 7.5vw;
+		margin-right: 25vw;
+	}
+
+	.DAW3 {
+		width: 65%;
+		margin-left: 7.5vw;
+		margin-right: 25vw;
+	}
+
+	.DAW4 {
+		width: 65%;
+		margin-left: 7.5vw;
+		margin-right: 25vw;
+	}
 }
 
 .file {
