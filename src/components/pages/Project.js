@@ -6,7 +6,6 @@ const Project = () => {
   return (
     <div>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           This site is a work in progress. Please check back later.
         </p>
