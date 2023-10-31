@@ -38,6 +38,55 @@ window.onload = function() {
     });
   }
 }
+
+function topicSelectHOME() {
+  console.log("topicSelectHOME");
+  document.getElementsByClassName("App-header")[0].style.display = "flex";
+  document.getElementsByClassName("DAW")[0].style.display = "none";
+};
+
+function topicSelectDAW1() {
+  console.log("topicSelectDAW1");
+  document.getElementsByClassName("DAW")[0].style.display = "block";
+  document.getElementsByClassName("DAW1")[0].style.display = "block";
+  document.getElementsByClassName("App-header")[0].style.display = "none";
+  document.getElementsByClassName("DAW2")[0].style.display = "none";
+  document.getElementsByClassName("DAW3")[0].style.display = "none";
+  document.getElementsByClassName("DAW4")[0].style.display = "none";
+};
+
+function topicSelectDAW2() {
+  console.log("topicSelectDAW2");
+  document.getElementsByClassName("DAW")[0].style.display = "block";
+  document.getElementsByClassName("DAW2")[0].style.display = "block";
+  document.getElementsByClassName("App-header")[0].style.display = "none";
+  document.getElementsByClassName("DAW1")[0].style.display = "none";
+  document.getElementsByClassName("DAW3")[0].style.display = "none";
+  document.getElementsByClassName("DAW4")[0].style.display = "none";
+};
+
+
+function topicSelectDAW3() {
+  console.log("topicSelectDAW1");
+  document.getElementsByClassName("DAW")[0].style.display = "block";
+  document.getElementsByClassName("DAW3")[0].style.display = "block";
+  document.getElementsByClassName("App-header")[0].style.display = "none";
+  document.getElementsByClassName("DAW2")[0].style.display = "none";
+  document.getElementsByClassName("DAW1")[0].style.display = "none";
+  document.getElementsByClassName("DAW4")[0].style.display = "none";
+};
+
+function topicSelectDAW4() {
+  console.log("topicSelectDAW4");
+  document.getElementsByClassName("DAW")[0].style.display = "block";
+  document.getElementsByClassName("DAW4")[0].style.display = "block";
+  document.getElementsByClassName("App-header")[0].style.display = "none";
+  document.getElementsByClassName("DAW2")[0].style.display = "none";
+  document.getElementsByClassName("DAW3")[0].style.display = "none";
+  document.getElementsByClassName("DAW1")[0].style.display = "none";
+};
+
+
 function Sidebar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -129,16 +178,16 @@ function Sidebar() {
                 <div class="Hamburger-sidebar Hamburger-bar-block Hamburger-border-right" style={{display: "none"}} id="Hamburger-Sidebar">
                 </div>
                 <div class="sidenav">
-                  <a href="#">Home</a>
+                  <a href="#" onClick={topicSelectHOME}>Home</a>
                   <button class="dropdown-btn">Designing Accessible Websites
                     <i class="fa fa-caret-right" style={{display: "inline-block"}}></i>
                     <i class="fa fa-caret-down" style={{display: "none"}}></i>
                   </button>
                   <div class="dropdown-container">
-                    <a href="#">Principle 1: Perceivability</a>
-                    <a href="#">Principle 2: Operability</a>
-                    <a href="#">Principle 3: Understandable</a>
-                    <a href="#">Principle 4: Robust</a>
+                    <a href="#" onClick={topicSelectDAW1}>Principle 1: Perceivability</a>
+                    <a href="#" onClick={topicSelectDAW2}>Principle 2: Operability</a>
+                    <a href="#" onClick={topicSelectDAW3}>Principle 3: Understandable</a>
+                    <a href="#" onClick={topicSelectDAW4}>Principle 4: Robust</a>
                   </div>
                   <button class="dropdown-btn">Color Blindness
                     <i class="fa fa-caret-right" style={{display: "inline-block"}}></i>

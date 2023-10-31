@@ -11,6 +11,18 @@ input[type="file"] {
     display: none;
 }
 
+.DAW {
+	display: none;
+	background-color: #282c34;
+	color: white;
+	margin-left: 15vw;
+    object-fit: cover;
+    width: 100% - 15vw;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
 .file {
     display: flex;
 	flex-direction: column;
