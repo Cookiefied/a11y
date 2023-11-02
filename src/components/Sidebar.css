@@ -132,8 +132,12 @@
   }
 
   ul {list-style: none} 
-  li {display: block;
-  padding: 0.25vw;}
+  li {
+    display: block;
+    padding: 0.25vw;
+    margin-left: -1vw;
+    margin-right: 1vw;
+  }
 
   svg { color: #f3f3f3; }
 
@@ -201,4 +205,13 @@
 .fa-caret-down, .fa-caret-right {
   float: right;
   padding-right: 8px;
+}
+
+.colorslides {
+  width: 50vw;
+  margin-left: 12vw;
+}
+
+.colorblindness {
+  background-color: #282c34;
 }

@@ -27,9 +27,25 @@ input[type="file"] {
 		width: 65%;
 		margin-left: 7.5vw;
 		margin-right: 25vw;
+		font-size: 1.25vw;
 	}
 
 }
+
+.App-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	margin-left: 12vw;
+}
+.App-header > p {
+	margin-top: 50vh;
+	font-size: 1vw;
+}
+
 
 .file {
     display: flex;

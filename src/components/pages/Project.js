@@ -1,11 +1,22 @@
 import "./Project.css"
 import React, { useState } from "react";
 import logo from '../../images/a11y_circle.png';
+import slide1 from '../../images/color_blindness/Slide1.png';
+import slide2 from '../../images/color_blindness/Slide2.png';
+import slide3 from '../../images/color_blindness/Slide3.png';
+import slide4 from '../../images/color_blindness/Slide4.png';
+import slide5 from '../../images/color_blindness/Slide5.png';
+import slide6 from '../../images/color_blindness/Slide6.png';
+import slide7 from '../../images/color_blindness/Slide7.png';
+import slide8 from '../../images/color_blindness/Slide8.png';
+import slide9 from '../../images/color_blindness/Slide9.png';
 
 const Project = () => {
   return (
     <div>
       <header className="App-header">
+        <h1>Welcome to our site!</h1>
+        <h3>Please use the side navigation to browse, or click the top info button for more information.</h3>
         <p>
           This site is a work in progress. Please check back later.
         </p>
@@ -28,6 +39,17 @@ const Project = () => {
             <h2>Principle 4: Robustness</h2>
             <p>Summary: Robustness in accessible web design pertains to the website's ability to remain functional and provide a consistent user experience across different devices, browsers, and assistive technologies. By prioritizing robustness, web designers help guarantee that individuals using various technologies to access the web can do so effectively, contributing to a more reliable and accessible online environment.</p>
           </div>
+        </div>
+        <div class="colorblindness">
+          <img src={slide1} class="colorslides"></img>
+          <img src={slide2} class="colorslides"></img>
+          <img src={slide3} class="colorslides"></img>
+          <img src={slide4} class="colorslides"></img>
+          <img src={slide5} class="colorslides"></img>
+          <img src={slide6} class="colorslides"></img>
+          <img src={slide7} class="colorslides"></img>
+          <img src={slide8} class="colorslides"></img>
+          <img src={slide9} class="colorslides"></img>
         </div>
       </body>
     </div>

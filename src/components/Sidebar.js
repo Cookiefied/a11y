@@ -41,52 +41,67 @@ window.onload = function() {
 }
 
 function topicSelectHOME() {
-  console.log("topicSelectHOME");
   document.getElementsByClassName("App-header")[0].style.display = "flex";
   document.getElementsByClassName("DAW")[0].style.display = "none";
+  document.getElementsByClassName("colorblindness")[0].style.display = "none";
 };
 
-function topicSelectDAW1() {
-  console.log("topicSelectDAW1");
-  document.getElementsByClassName("DAW")[0].style.display = "block";
-  document.getElementsByClassName("DAW1")[0].style.display = "block";
-  document.getElementsByClassName("App-header")[0].style.display = "none";
+function hideMain() { document.getElementsByClassName("App-header")[0].style.display = "none"; }
+
+function hideDAW() {
+  document.getElementsByClassName("DAW")[0].style.display = "none";
+  document.getElementsByClassName("DAW1")[0].style.display = "none";
   document.getElementsByClassName("DAW2")[0].style.display = "none";
   document.getElementsByClassName("DAW3")[0].style.display = "none";
   document.getElementsByClassName("DAW4")[0].style.display = "none";
+}
+
+function topicSelectDAW1() {
+  hideMain();
+  document.getElementsByClassName("DAW")[0].style.display = "block";
+  document.getElementsByClassName("DAW1")[0].style.display = "block";
+  document.getElementsByClassName("DAW2")[0].style.display = "none";
+  document.getElementsByClassName("DAW3")[0].style.display = "none";
+  document.getElementsByClassName("DAW4")[0].style.display = "none";
+  document.getElementsByClassName("colorblindness")[0].style.display = "none";
 };
 
 function topicSelectDAW2() {
-  console.log("topicSelectDAW2");
+  hideMain();
   document.getElementsByClassName("DAW")[0].style.display = "block";
   document.getElementsByClassName("DAW2")[0].style.display = "block";
-  document.getElementsByClassName("App-header")[0].style.display = "none";
   document.getElementsByClassName("DAW1")[0].style.display = "none";
   document.getElementsByClassName("DAW3")[0].style.display = "none";
   document.getElementsByClassName("DAW4")[0].style.display = "none";
+  document.getElementsByClassName("colorblindness")[0].style.display = "none";
 };
 
 
 function topicSelectDAW3() {
-  console.log("topicSelectDAW1");
+  hideMain();
   document.getElementsByClassName("DAW")[0].style.display = "block";
   document.getElementsByClassName("DAW3")[0].style.display = "block";
-  document.getElementsByClassName("App-header")[0].style.display = "none";
   document.getElementsByClassName("DAW2")[0].style.display = "none";
   document.getElementsByClassName("DAW1")[0].style.display = "none";
   document.getElementsByClassName("DAW4")[0].style.display = "none";
+  document.getElementsByClassName("colorblindness")[0].style.display = "none";
 };
 
 function topicSelectDAW4() {
-  console.log("topicSelectDAW4");
+  hideMain();
   document.getElementsByClassName("DAW")[0].style.display = "block";
   document.getElementsByClassName("DAW4")[0].style.display = "block";
-  document.getElementsByClassName("App-header")[0].style.display = "none";
   document.getElementsByClassName("DAW2")[0].style.display = "none";
   document.getElementsByClassName("DAW3")[0].style.display = "none";
   document.getElementsByClassName("DAW1")[0].style.display = "none";
+  document.getElementsByClassName("colorblindness")[0].style.display = "none";
 };
 
+function topicSelectColorB() {
+  hideMain();
+  hideDAW();
+  document.getElementsByClassName("colorblindness")[0].style.display = "block";
+}
 
 function Sidebar() {
   const [click, setClick] = useState(false);
@@ -196,7 +211,7 @@ function Sidebar() {
                     <i class="fa fa-caret-down" style={{display: "none"}}></i>
                   </button>
                   <div class="dropdown-container">
-                    <a href="#">Types of</a>
+                    <a href="#" onClick={topicSelectColorB}>Types of</a>
                     <a href="#">How it affects vision</a>
                   </div>
                   <button class="dropdown-btn">Reading Disorders
@@ -298,7 +313,7 @@ function Sidebar() {
                                 ref={descriptionElementRef}
                                 tabIndex={-1}
                             >
-                                <p>The A11y Upgrades project is aimed at creating and maintaining an information-based website. The project's primary objectives are to promote accessibility awareness, and test the knowledge gained by interacting with our website.</p>
+                                <p>The a11y upgrades project is aimed at creating and maintaining an information-based website. The project's primary objectives are to promote accessibility awareness, and test the knowledge gained by interacting with our website.</p>
                             </DialogContentText>
                             </DialogContent>
                         </Dialog>
