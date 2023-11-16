@@ -22,7 +22,6 @@ input[type="file"] {
     position: fixed;
     z-index: -1;
 
-
 	.DAW1, .DAW2, .DAW3, .DAW4 {
 		width: 65%;
 		margin-left: 7.5vw;
@@ -30,6 +29,30 @@ input[type="file"] {
 		font-size: 1.25vw;
 	}
 
+}
+
+h2 {
+	text-align: center;
+}
+h3 {
+	text-align: left;
+	text-decoration: underline;
+}
+h4 {
+	text-align: left;
+}
+p {
+	text-align: left;
+	margin-left: 1.5em;
+}
+ul {
+	text-align: left;
+	text-decoration: underline;
+	margin-left: -1em;
+}
+li {
+	text-align: left;
+	margin-left: 3.5em!important;
 }
 
 .App-header {
