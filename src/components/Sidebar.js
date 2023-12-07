@@ -48,6 +48,15 @@ function topicSelectHOME() {
 
 function hideMain() { document.getElementsByClassName("App-header")[0].style.display = "none"; }
 
+function topicSelectQUIZ() {
+  hideDAW();
+  hideMain();
+  document.getElementsByClassName("App-header")[0].style.display = "none";
+  document.getElementsByClassName("quiz")[0].style.display = "block";
+  document.getElementsByClassName("DAW1")[0].style.display = "none";
+  document.getElementsByClassName("colorblindness")[0].style.display = "none";
+}
+
 function hideDAW() {
   document.getElementsByClassName("DAW")[0].style.display = "none";
   document.getElementsByClassName("DAW1")[0].style.display = "none";
@@ -64,6 +73,7 @@ function topicSelectDAW1() {
   document.getElementsByClassName("DAW3")[0].style.display = "none";
   document.getElementsByClassName("DAW4")[0].style.display = "none";
   document.getElementsByClassName("colorblindness")[0].style.display = "none";
+  document.getElementsByClassName("quiz")[0].style.display = "none";
 };
 
 function topicSelectDAW2() {
@@ -74,6 +84,7 @@ function topicSelectDAW2() {
   document.getElementsByClassName("DAW3")[0].style.display = "none";
   document.getElementsByClassName("DAW4")[0].style.display = "none";
   document.getElementsByClassName("colorblindness")[0].style.display = "none";
+  document.getElementsByClassName("quiz")[0].style.display = "none";
 };
 
 
@@ -85,6 +96,7 @@ function topicSelectDAW3() {
   document.getElementsByClassName("DAW1")[0].style.display = "none";
   document.getElementsByClassName("DAW4")[0].style.display = "none";
   document.getElementsByClassName("colorblindness")[0].style.display = "none";
+  document.getElementsByClassName("quiz")[0].style.display = "none";
 };
 
 function topicSelectDAW4() {
@@ -95,6 +107,7 @@ function topicSelectDAW4() {
   document.getElementsByClassName("DAW3")[0].style.display = "none";
   document.getElementsByClassName("DAW1")[0].style.display = "none";
   document.getElementsByClassName("colorblindness")[0].style.display = "none";
+  document.getElementsByClassName("quiz")[0].style.display = "none";
 };
 
 function topicSelectColorB() {
@@ -195,7 +208,8 @@ function Sidebar() {
                 </div>
                 <div class="sidenav">
                   <img src={logo} className="App-logo" alt="logo" />
-                  <a href="#" onClick={topicSelectHOME}>Home</a>
+                  <a href="/" onClick={topicSelectHOME}>Home</a>
+                  <a href="#" onClick={topicSelectQUIZ}>Quiz</a>
                   <button class="dropdown-btn">Designing Accessible Websites
                     <i class="fa fa-caret-right" style={{display: "inline-block"}}></i>
                     <i class="fa fa-caret-down" style={{display: "none"}}></i>

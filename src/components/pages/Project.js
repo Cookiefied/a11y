@@ -2,6 +2,7 @@ import "./Project.css"
 import React, { useState } from "react";
 import logo from '../../images/a11y_circle.png';
 import { Link } from 'react-router-dom';
+import Quiz from '../Quiz'
 import slide1 from '../../images/color_blindness/Slide1.png';
 import slide2 from '../../images/color_blindness/Slide2.png';
 import slide3 from '../../images/color_blindness/Slide3.png';
@@ -18,12 +19,14 @@ const Project = () => {
       <header className="App-header">
         <h1>Welcome to our site!</h1>
         <h4>Please use the side navigation to browse, or click the top info button for more information.</h4>
-        <Link to="/quiz">Take the Quiz</Link>
         <p>
           This site is a work in progress. Please check back later.
         </p>
       </header>
       <body>
+        <div class="quiz">
+          <Quiz />
+        </div>
         <div class="DAW">
           <div class="DAW1">
             <h2>Principle 1: Perceivability</h2>
