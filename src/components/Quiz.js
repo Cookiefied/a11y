@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Project from "../components/pages/Project";
 import Sidebar from '../components/Sidebar';
-//import './Quiz.css';
+import './Quiz.css';
 
 export default function Quiz() {
     const questions = [
@@ -115,8 +115,8 @@ export default function Quiz() {
     };
     return (
 
-
-        <div className='app'>
+        <div className='container'>
+            <div className='app'>
 
             {showScore ? (
                 <div className='score-section'>
@@ -137,7 +137,9 @@ export default function Quiz() {
                     </div>
                 </>
             )}
+            </div>
         </div>
+        
 
     );
 }
